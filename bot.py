@@ -83,7 +83,7 @@ def main():
     app.add_handler(CommandHandler("end", end_trip))
 
     print("🤖 Bot is running...")
-    app.run_polling()
+    app.run_polling(poll_interval=2)
 
 
 if __name__ == "__main__":
