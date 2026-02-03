@@ -15,6 +15,7 @@ from handlers.status import status
 from handlers.undo import undo
 from handlers.add_member import add_member
 from handlers.bulk import bulk_add
+from handlers.help import help_command
 
 # ---- Utility: group-only check ----
 def is_group(update: Update) -> bool:
@@ -81,6 +82,7 @@ def main():
     app.add_handler(CommandHandler("add_member", add_member))
     app.add_handler(CommandHandler("bulk", bulk_add))
     app.add_handler(CommandHandler("end", end_trip))
+    app.add_handler(CommandHandler("help", help_command))
 
     print("🤖 Bot is running...")
     app.run_polling(poll_interval=2)
